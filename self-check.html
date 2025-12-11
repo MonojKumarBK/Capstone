@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Symptoms — Mentallify</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta name="description" content="Learn about common mental health symptoms and use a gentle self-check to decide when to seek professional help." />
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="/" class="logo" aria-label="Mentallify homepage">Mental<span>lify</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav>
+        <ul id="main-nav" role="menubar">
+          <li role="none"><a role="menuitem" href="/index.html">Home</a></li>
+          <li role="none"><a role="menuitem" href="/disorders.html">Disorders</a></li>
+          <li role="none"><a role="menuitem" href="/self-check.html" class="active">Symptoms</a></li>
+          <li role="none"><a role="menuitem" href="/resources.html">Resources</a></li>
+          <li role="none"><a role="menuitem" href="/contact.html">Contact</a></li>
+          <li role="none"><a role="menuitem" href="/about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:36px 16px 40px;">
+    <section class="content-section" aria-labelledby="self-check-heading">
+      <h2 id="self-check-heading">Self-Check &amp; What to Expect</h2>
+      <p style="color:var(--muted-2); max-width:840px; margin-bottom:14px;">
+        This page is a gentle starting point — not a diagnosis. It helps you notice patterns in mood,
+        sleep, energy and thoughts so you can decide when to talk with a professional.
+      </p>
+
+      <ol style="color:var(--muted-2); padding-left:20px; line-height:1.7; margin-bottom:18px;">
+        <li>The self-check asks a short series of yes/no questions inside the chat assistant.</li>
+        <li>Based on your answers, it shows a small results card with the top matched symptom clusters.</li>
+        <li>Results are only <strong>informational</strong> — they can’t replace a clinical evaluation.</li>
+        <li>If you have thoughts of self-harm or feel unsafe, please seek emergency or crisis help immediately.</li>
+      </ol>
+
+      <div style="margin:18px 0 6px;">
+        <button class="btn" id="open-self-check">
+          <i class="fas fa-comments" aria-hidden="true"></i>
+          Start Self-Check in Chat
+        </button>
+        
+      </div>
+      <p class="small" style="margin-top:4px;">
+        This opens the home page chat and focuses on the assistant. You can stop at any time.
+      </p>
+
+      <hr style="border:none; border-top:1px solid rgba(255,255,255,0.08); margin:24px 0 20px;" />
+
+      <h3 style="margin-bottom:8px;">Quick Symptom Checklist</h3>
+      <p class="small" style="margin-bottom:10px;">
+        Tick any items that feel familiar in the last couple of weeks. This stays in your browser only.
+      </p>
+
+      <div class="symptom-grid" style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
+        <label class="symptom-pill symptom-toggle">
+          <input type="checkbox" data-score="2" />
+          Persistent sadness or low mood
+        </label>
+        <label class="symptom-pill symptom-toggle">
+          <input type="checkbox" data-score="2" />
+          Loss of interest in usual activities
+        </label>
+        <label class="symptom-pill symptom-toggle">
+          <input type="checkbox" data-score="1" />
+          Excessive worry or racing thoughts
+        </label>
+        <label class="symptom-pill symptom-toggle">
+          <input type="checkbox" data-score="1" />
+          Panic attacks or sudden spikes of fear
+        </label>
+        <label class="symptom-pill symptom-toggle">
+          <input type="checkbox" data-score="1" />
+          Sleep problems (too little or too much)
+        </label>
+        <label class="symptom-pill symptom-toggle">
+          <input type="checkbox" data-score="1" />
+          Noticeable changes in appetite or weight
+        </label>
+        <label class="symptom-pill symptom-toggle">
+          <input type="checkbox" data-score="1" />
+          Feeling slowed down or unusually restless
+        </label>
+        <label class="symptom-pill symptom-toggle">
+          <input type="checkbox" data-score="2" />
+          Thoughts like “I’m a burden” or “people are better without me”
+        </label>
+        <label class="symptom-pill symptom-toggle">
+          <input type="checkbox" data-score="2" />
+          Intrusive thoughts or images you can’t control
+        </label>
+        <label class="symptom-pill symptom-toggle">
+          <input type="checkbox" data-score="2" />
+          Hearing or seeing things others don’t
+        </label>
+      </div>
+
+      <div id="checklist-feedback" class="analysis-result" style="display:block; margin-top:8px;">
+        Select a few items above to see a gentle suggestion here.
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:24px;">
+        <div class="content-section" style="padding:18px;">
+          <h3 style="margin-bottom:8px; font-size:16px; color:var(--accent);">Green Zone — keep watching</h3>
+          <p class="small">
+            A few mild symptoms that come and go are common. Keep an eye on patterns, sleep,
+            stress and routines. Journaling or talking with a trusted friend can help.
+          </p>
+        </div>
+        <div class="content-section" style="padding:18px;">
+          <h3 style="margin-bottom:8px; font-size:16px; color:var(--accent);">Amber Zone — consider support</h3>
+          <p class="small">
+            If symptoms are frequent or affect work, study or relationships, consider reaching out to
+            a counsellor, therapist or helpline. Early support usually makes things easier.
+          </p>
+        </div>
+        <div class="content-section" style="padding:18px;">
+          <h3 style="margin-bottom:8px; font-size:16px; color:var(--accent);">Red Zone — urgent help</h3>
+          <p class="small">
+            If you have strong self-harm thoughts, feel unsafe, or notice hallucinations or severe
+            confusion, please seek emergency or crisis help immediately. Online tools are not enough.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="text-align:center; padding:18px 0; color:rgba(255,255,255,0.7); font-size:13px;">
+        &copy; 2025 Mentallify — educational information only. Not a diagnostic or emergency service.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // mobile nav toggle
+      const navToggle = document.querySelector('.nav-toggle');
+      const mainNav = document.querySelector('nav ul');
+      if (navToggle && mainNav) {
+        navToggle.addEventListener('click', () => {
+          mainNav.classList.toggle('show');
+          navToggle.setAttribute('aria-expanded', mainNav.classList.contains('show') ? 'true' : 'false');
+        });
+      }
+
+      // Self-check CTA -> go to home chat section
+      const selfCheckBtn = document.getElementById('open-self-check');
+      if (selfCheckBtn) {
+        selfCheckBtn.addEventListener('click', () => {
+          // Optional: mark intent in localStorage if you later want home page to auto-start quiz
+          try { localStorage.setItem('mentallify_start_quiz', '1'); } catch (e) {}
+          // --- UPDATED NAVIGATION LINE ---
+          window.location.href = 'index.html#chatbot';
+          // -------------------------------
+        });
+      }
+
+      // Interactive checklist feedback
+      const feedback = document.getElementById('checklist-feedback');
+      const boxes = Array.from(document.querySelectorAll('.symptom-toggle input[type="checkbox"]'));
+
+      function updateFeedback() {
+        if (!feedback) return;
+        const checked = boxes.filter(cb => cb.checked);
+        const totalScore = checked.reduce((sum, cb) => sum + (Number(cb.dataset.score) || 1), 0);
+
+        if (checked.length === 0) {
+          feedback.style.display = 'block';
+          feedback.textContent = 'Select one or more items above to see a gentle suggestion.';
+          return;
+        }
+
+        feedback.style.display = 'block';
+        if (totalScore <= 2) {
+          feedback.textContent =
+            'You selected a small number of mild symptoms. It can still be helpful to watch patterns and talk with someone you trust.';
+        } else if (totalScore <= 5) {
+          feedback.textContent =
+            'You selected several symptoms. Consider booking a check-in with a counsellor or mental health professional.';
+        } else {
+          feedback.textContent =
+            'You selected many significant symptoms. It may be a good idea to seek professional help soon — online or in-person — especially if these have lasted more than a couple of weeks.';
+        }
+      }
+
+      boxes.forEach(cb => cb.addEventListener('change', updateFeedback));
+      updateFeedback();
+    });
+  </script>
+
+  <script src="/auth.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

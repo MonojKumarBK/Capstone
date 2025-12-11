@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — Mentallify</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="/" class="logo">Mentallify<span>lify</span></a>
+      <div id="header-actions" style="margin-left:auto;"></div>
+    </div>
+  </header>
+
+  <main style="min-height:calc(100vh - 220px); display:flex; align-items:center; justify-content:center; padding:120px 20px 40px;">
+    <div style="width:420px; max-width:92%; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:26px; border-radius:12px; box-shadow: 0 30px 80px rgba(6,7,20,0.6); border:1px solid rgba(255,255,255,0.03);">
+      <h2 style="margin-bottom:8px; color:var(--primary);">Sign in to Mentallify</h2>
+      <p id="desc" style="color:var(--muted-2); margin-bottom:14px;">
+        Demo login: enter any username to simulate signing in.
+      </p>
+
+      <!-- Demo username/password form -->
+      <form id="login-form" style="display:flex; flex-direction:column; gap:12px;">
+        <input id="username" name="username" placeholder="Username" required 
+          style="padding:12px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.04); 
+                 background:rgba(255,255,255,0.02); color:var(--white-soft);" />
+
+        <input id="password" name="password" type="password" placeholder="Password"
+          style="padding:12px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.04); 
+                 background:rgba(255,255,255,0.02); color:var(--white-soft);" />
+
+        <div style="display:flex; gap:10px;">
+          <button type="submit" class="btn" style="flex:1;">Sign in</button>
+          <a href="/front.html" class="btn ghost" style="padding:10px 12px; align-self:center;">Back</a>
+        </div>
+      </form>
+
+      <div style="height:12px"></div>
+
+      <!-- OR separator -->
+      <div style="display:flex; align-items:center; gap:12px; margin:6px 0 10px;">
+        <hr style="flex:1; border:none; height:1px; background:rgba(255,255,255,0.03);" />
+        <div style="color:var(--muted-2); font-size:13px;">or</div>
+        <hr style="flex:1; border:none; height:1px; background:rgba(255,255,255,0.03);" />
+      </div>
+
+      <!-- Google Sign-in button -->
+      <button id="google-login" class="btn" type="button" 
+        style="margin-top:6px; width:100%; display:flex; align-items:center; justify-content:center; gap:10px;">
+        <img src="https://developers.google.com/identity/images/g-logo.png" alt="G" 
+             style="width:20px;height:20px;">
+        <span style="font-weight:800;">Sign in with Google</span>
+      </button>
+
+      <div id="login-status" style="margin-top:12px; color:var(--muted-2); font-size:14px;"></div>
+    </div>
+  </main>
+
+  <footer style="padding:36px 0; text-align:center; color:rgba(255,255,255,0.6);">
+    &copy; 2025 Mentallify — educational information only.
+  </footer>
+
+  <!-- load central auth helpers -->
+  <script src="/auth.js"></script>
+
+  <!-- your requested event bindings (demo login + google signin) -->
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const uname = (document.getElementById('username').value || '').trim();
+      if (!uname) { document.getElementById('login-status').textContent = 'Please enter a username.'; return; }
+      window.MentallifyAuth.demoSignIn(uname);
+    });
+
+    document.getElementById('google-login').addEventListener('click', function () {
+      window.MentallifyAuth.signInWithGoogle();
+    });
+    
+  </script>
+</body>
+</html>

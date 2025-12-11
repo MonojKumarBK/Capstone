@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+.venv/
+
+# Data / model artifacts (may want to keep them locally)
+backend/mental_health_model.pkl
+backend/tfidf_vectorizer.pkl
+backend/label_encoder.pkl
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node / build
+dist/
+build/
+
+# Python
+__pycache__/
+*.pyc
+
+.env
+*.env
+.env.*
+
+# OS
+.DS_Store

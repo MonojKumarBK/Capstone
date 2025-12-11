@@ -1,0 +1,80 @@
+{
+  "diseases": {
+    "Depression": {
+      "symptoms": [
+        "feeling sad",
+        "loss of interest",
+        "fatigue",
+        "changes in appetite",
+        "insomnia or hypersomnia",
+        "difficulty concentrating",
+        "thoughts of death"
+      ],
+      "precautions": "Maintain sleep hygiene, speak to a trusted person, and consult a mental health professional if symptoms persist or you have thoughts of self-harm."
+    },
+    "Anxiety": {
+      "symptoms": [
+        "excessive worry",
+        "restlessness",
+        "muscle tension",
+        "panic attacks",
+        "trouble sleeping",
+        "avoidance"
+      ],
+      "precautions": "Practice grounding/breathing techniques, reduce stimulants, and consult a professional when symptoms interfere with life."
+    },
+    "Bipolar": {
+      "symptoms": [
+        "periods of high energy",
+        "reduced need for sleep",
+        "racing thoughts",
+        "risky behavior",
+        "depressive episodes"
+      ],
+      "precautions": "Keep a mood diary, avoid substance use, and seek psychiatric care for medication and monitoring."
+    },
+    "PTSD": {
+      "symptoms": [
+        "intrusive memories",
+        "flashbacks",
+        "avoidance of reminders",
+        "hypervigilance",
+        "sleep disturbance"
+      ],
+      "precautions": "Consider trauma-focused therapy and ensure a safe support network."
+    },
+    "OCD": {
+      "symptoms": [
+        "repetitive rituals",
+        "intrusive thoughts",
+        "time-consuming rituals",
+        "avoidance"
+      ],
+      "precautions": "Exposure and Response Prevention therapy (ERP) is effective; seek specialist guidance."
+    },
+    "Schizophrenia": {
+      "symptoms": [
+        "hallucinations",
+        "delusions",
+        "disorganized speech",
+        "social withdrawal",
+        "reduced emotional expression"
+      ],
+      "precautions": "Immediate psychiatric evaluation recommended for suspected psychosis."
+    }
+  },
+  "questions": [
+    {"text":"Have you been feeling sad or down recently?","symptom_key":"feeling sad"},
+    {"text":"Have you lost interest in activities you usually enjoy?","symptom_key":"loss of interest"},
+    {"text":"Have you been feeling unusually worried or anxious?","symptom_key":"excessive worry"},
+    {"text":"Have you noticed changes in appetite or weight?","symptom_key":"changes in appetite"},
+    {"text":"Are you having trouble sleeping, or sleeping too much?","symptom_key":"insomnia or hypersomnia"},
+    {"text":"Have you experienced panic attacks or sudden intense fear?","symptom_key":"panic attacks"},
+    {"text":"Have you felt unusually energized or needing less sleep?","symptom_key":"periods of high energy"},
+    {"text":"Do you have intrusive memories or flashbacks from a trauma?","symptom_key":"intrusive memories"},
+    {"text":"Do you perform repetitive rituals that take up your time?","symptom_key":"repetitive rituals"},
+    {"text":"Have you experienced hearing or seeing things others do not?","symptom_key":"hallucinations"},
+    {"text":"Do you feel restless or have muscle tension often?","symptom_key":"restlessness"},
+    {"text":"Do you have difficulty concentrating or making decisions?","symptom_key":"difficulty concentrating"}
+  ]
+}

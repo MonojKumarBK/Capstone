@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Contact — Mentallify</title>
+  <link rel="stylesheet" href="/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Header (your existing markup) -->
+  <header>
+    <div class="container header-container">
+      <a href="/" class="logo">Mental<span>lify</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav>
+        <ul id="main-nav" role="menubar">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/disorders.html">Disorders</a></li>
+          <li><a href="/self-check.html">Symptoms</a></li>
+          <li><a href="/resources.html">Resources</a></li>
+          <li><a class="active" href="/contact.html">Contact</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:40px 0;">
+    <section class="content-section" style="max-width:780px; margin:0 auto;">
+      <h2>Contact Us</h2>
+      <p style="color:var(--muted); margin-bottom:18px;">
+        You can reach out for feedback or suggestions.
+      </p>
+
+      <form id="contactForm" style="display:flex; flex-direction:column; gap:14px;">
+        <input id="name" name="name" type="text" placeholder="Your Name" required style="padding:12px; border-radius:10px; border:1px solid #eee;">
+        <input id="email" name="email" type="email" placeholder="Your Email" required style="padding:12px; border-radius:10px; border:1px solid #eee;">
+        <textarea id="message" name="message" rows="6" placeholder="Your Message" required style="padding:12px; border-radius:10px; border:1px solid #eee;"></textarea>
+
+        <button id="submitBtn" class="btn" type="submit" style="margin-top:6px;">Send Message</button>
+      </form>
+
+      <div id="status" role="status" aria-live="polite" style="margin-top:16px; display:block;"></div>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="text-align:center; padding:18px 0; color:#b7cbd8;">
+        &copy; 2025 Mentallify — educational information only.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Existing site scripts (keep if needed) -->
+  <script src="/auth.js"></script>
+  <script src="/app.js"></script>
+
+  <!-- contact form script -->
+  <script src="/static/js/contact.js"></script>
+</body>
+</html>

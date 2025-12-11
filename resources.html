@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resources — Mentallify</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta name="description" content="Mentallify — curated resources and self-care tools for mental wellbeing." />
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="/" class="logo" aria-label="Mentallify homepage">Mental<span>lify</span></a>
+
+      <div id="header-actions" style="display:flex; align-items:center; gap:10px;">
+        <a href="/login.html" class="btn ghost" style="padding:8px 12px; font-weight:700; text-decoration:none;">Login</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav"><i class="fas fa-bars"></i></button>
+      </div>
+
+      <nav>
+        <ul id="main-nav" role="menubar">
+          <li role="none"><a role="menuitem" href="/index.html">Home</a></li>
+          <li role="none"><a role="menuitem" href="/disorders.html">Disorders</a></li>
+          <li role="none"><a role="menuitem" href="/symptoms.html">Symptoms</a></li>
+          <li role="none"><a role="menuitem" href="/resources.html" class="active">Resources</a></li>
+          <li role="none"><a role="menuitem" href="/contact.html">Contact</a></li>
+          <li role="none"><a role="menuitem" href="/about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="resources-hero" style="padding:36px 0 28px;">
+    <div class="container">
+      <div style="max-width:900px;">
+        <h1 id="resources-hero" style="font-size:28px;">Resources & Self-Care Hub</h1>
+        <p style="color:var(--muted); margin-top:6px;">
+          Curated tools, short exercises, and directories to support mental wellbeing. Not a substitute for professional care.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container" style="padding:20px 20px 60px;">
+    <div class="content-section">
+      <h2 style="margin-bottom:6px;">What do you need right now?</h2>
+      <p style="color:var(--muted); margin-bottom:12px;">Quick actions — tap one to reveal immediate guidance or start the interactive self-check.</p>
+
+      <div class="quick-help" style="margin:12px 0 20px; padding:18px; border-radius:14px; background:linear-gradient(90deg, rgba(124,58,237,0.06), rgba(255,77,166,0.04));">
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn" data-quick="anxious">I’m feeling anxious</button>
+          <button class="btn" data-quick="sleep">I can’t sleep</button>
+          <button class="btn" data-quick="sad">I feel sad</button>
+          <button class="btn" data-quick="overwhelmed">I’m overwhelmed</button>
+
+          <button class="btn" id="open-self-check" style="margin-left:8px;">
+            <i class="fas fa-comments" aria-hidden="true"></i>
+            Start Self-Check in Chat
+          </button>
+        </div>
+
+        <div id="quick-response" style="margin-top:14px; display:none;"></div>
+      </div>
+
+      <h3 style="color:var(--accent); margin-top:12px;">Self-Care Toolkit</h3>
+      <div class="disorder-cards" style="margin-top:12px;">
+        <div class="disorder-card" role="article">
+          <h4>Breathing — Box breathing</h4>
+          <p>4 seconds in → 4 seconds hold → 4 seconds out → 4 seconds hold. Repeat 4 times. Great for acute anxiety relief.</p>
+        </div>
+
+        <div class="disorder-card" role="article">
+          <h4>Grounding — 5-4-3-2-1</h4>
+          <p>Name 5 things you see • 4 things you touch • 3 sounds • 2 smells • 1 taste — bring attention back to the present.</p>
+        </div>
+
+        <div class="disorder-card" role="article">
+          <h4>Journaling Prompt</h4>
+          <p>Write one worry, one small step you can take, and one thing you're grateful for. Keep it short—consistency matters more than length.</p>
+        </div>
+
+        <div class="disorder-card" role="article">
+          <h4>Sleep Hygiene</h4>
+          <p>Wind down 60 min before bed, avoid screens, keep a consistent sleep schedule, and avoid caffeine late afternoon.</p>
+        </div>
+
+        <div class="disorder-card" role="article">
+          <h4>Behavior Activation</h4>
+          <p>When low, schedule 2-minute tasks (tidy a corner, step outside, drink water). Tiny wins build momentum.</p>
+        </div>
+
+        <div class="disorder-card" role="article">
+          <h4>Mindful Break</h4>
+          <p>Pause for 60 seconds: 3 deep breaths, notice body sensations, label emotions, and release tension slowly.</p>
+        </div>
+      </div>
+
+      <h3 style="color:var(--accent); margin-top:26px;">Find a Therapist / Directory</h3>
+      <p style="color:var(--muted); margin-bottom:8px;">Click any directory to visit (external).</p>
+      <div class="disorder-cards">
+        <div class="disorder-card">
+          <h4>Psychology Today</h4>
+          <p>Global directory for therapists and support groups.</p>
+          <a class="btn" href="https://www.psychologytoday.com" target="_blank" rel="noopener">Open Directory</a>
+        </div>
+
+        <div class="disorder-card">
+          <h4>TherapyRoute</h4>
+          <p>Worldwide therapist listings and mental health services.</p>
+          <a class="btn" href="https://www.therapyroute.com" target="_blank" rel="noopener">Open Directory</a>
+        </div>
+
+        <div class="disorder-card">
+          <h4>BetterHelp</h4>
+          <p>Online counseling for remote access to professional therapy.</p>
+          <a class="btn" href="https://www.betterhelp.com" target="_blank" rel="noopener">Visit</a>
+        </div>
+      </div>
+
+      <h3 style="color:var(--accent); margin-top:28px;">Crisis Lines & Immediate Help</h3>
+      <p style="color:var(--muted);">If you are in immediate danger or considering self-harm, contact local emergency services right away.</p>
+      <ul style="color:var(--white-soft); line-height:1.7; margin-top:12px;">
+        <li><strong>India:</strong> Aasra — +91 9820466726</li>
+        <li><strong>USA:</strong> 988 Suicide &amp; Crisis Lifeline</li>
+        <li><strong>UK:</strong> Samaritans — 116 123</li>
+        <li><strong>Australia:</strong> Lifeline — 13 11 14</li>
+        <li><strong>Global</strong> directory: <a class="btn" href="https://www.iasp.info/crisis-centres-helplines/" target="_blank" rel="noopener">Open</a></li>
+      </ul>
+
+      <h3 style="color:var(--accent); margin-top:28px;">Useful Wellness Apps</h3>
+      <div class="disorder-cards" style="margin-top:10px;">
+        <div class="disorder-card">
+          <h4>Calm</h4>
+          <p>Meditation, sleep stories, relaxation exercises.</p>
+          <a class="btn" href="https://www.calm.com" target="_blank" rel="noopener">Visit</a>
+        </div>
+        <div class="disorder-card">
+          <h4>Headspace</h4>
+          <p>Guided meditations for beginners and daily practice.</p>
+          <a class="btn" href="https://www.headspace.com" target="_blank" rel="noopener">Visit</a>
+        </div>
+        <div class="disorder-card">
+          <h4>Wysa</h4>
+          <p>AI companion for stress management and micro-tools.</p>
+          <a class="btn" href="https://www.wysa.io" target="_blank" rel="noopener">Visit</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Mentallify</h3>
+          <p style="color:#d6e9f3;">Accurate, accessible information about mental health to support understanding and recovery.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="/">Home</a>
+          <a href="/disorders.html">Disorders</a>
+          <a href="/symptoms.html">Symptoms</a>
+          <a href="/resources.html">Resources</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <div style="color:#cfe6f3; margin-bottom:6px;"><i class="fas fa-envelope"></i> info@mentallify.org</div>
+          <div style="color:#cfe6f3;"><i class="fas fa-phone"></i> 1-800-MENTALFY</div>
+        </div>
+      </div>
+
+      <div class="copyright" style="text-align:center; padding:18px 0;">
+        &copy; 2025 Mentallify — educational information only.
+      </div>
+    </div>
+  </footer>
+
+  <script src="/auth.js"></script>
+  <script src="app.js"></script>
+
+  <script>
+    // quick responses for the small quick-help buttons
+    document.addEventListener('click', function (ev) {
+      const btn = ev.target.closest && ev.target.closest('[data-quick]');
+      if (!btn) return;
+      const key = btn.getAttribute('data-quick');
+      const out = document.getElementById('quick-response');
+      out.style.display = 'block';
+      if (key === 'anxious') {
+        out.innerHTML = '<div class="analysis-result">Try slow diaphragmatic breathing (4-4-4) and the 5-4-3-2-1 grounding now. If symptoms are severe, consider starting the self-check.</div>';
+      } else if (key === 'sleep') {
+        out.innerHTML = '<div class="analysis-result">Try a wind-down routine: dim lights, no screens 45–60 min before bed, and 4-7-8 breathing if you wake up anxious.</div>';
+      } else if (key === 'sad') {
+        out.innerHTML = '<div class="analysis-result">Try a 2-minute activity (walk, tidy a corner), then write one small goal for the day. If persistent, start the self-check.</div>';
+      } else if (key === 'overwhelmed') {
+        out.innerHTML = '<div class="analysis-result">Pause. Take 3 slow breaths. Break your to-do list into one 2-minute task you can finish now.</div>';
+      }
+      // scroll the response into view smoothly
+      out.scrollIntoView({behavior:'smooth', block:'center'});
+    });
+
+    // Start Self-Check button: set localStorage flag and navigate home (intro bypass logic on index.html should open chat)
+    const openBtn = document.getElementById('open-self-check');
+    if (openBtn) {
+      openBtn.addEventListener('click', function (e) {
+        // set localStorage so index.html can detect and open chat directly
+        try { localStorage.setItem('mentallify_open_self_check', '1'); } catch (err) { /* ignore */ }
+
+        // --- NAVIGATION CHANGE ---
+        // Explicitly navigate to index.html and scroll to the #chatbot section
+        window.location.href = 'index.html#chatbot';
+        // -------------------------
+      });
+    }
+
+    // mobile nav toggle (duplicate if not already in app.js)
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const mainNav = document.querySelector('nav ul');
+      if (navToggle) navToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('show');
+        navToggle.setAttribute('aria-expanded', mainNav.classList.contains('show') ? 'true' : 'false');
+      });
+    });
+  </script>
+</body>
+</html>

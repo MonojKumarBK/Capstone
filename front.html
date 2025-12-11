@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Welcome — Mentallify</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <!-- Optional: use the Inter font for best result -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="/" class="logo">Mentallify</a>
+
+      <!-- right area (auth placeholder updated by auth.js) -->
+      <div id="header-actions" style="margin-left:auto; display:flex; align-items:center; gap:12px;">
+        <!-- auth.js will populate this -->
+        <a id="header-login-link" class="btn ghost" href="/login.html" style="padding:8px 12px;border-radius:10px;text-decoration:none;">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="min-height:100vh; display:flex; align-items:center; justify-content:center; padding:120px 20px 40px;">
+    <section style="max-width:980px; text-align:center; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:48px; border-radius:16px; box-shadow:0 30px 80px rgba(6,7,20,0.6); border:1px solid rgba(255,255,255,0.03);">
+      <h1 style="font-size:42px; margin-bottom:14px; color:var(--white-soft);">Welcome to Mentallify</h1>
+      <p style="color:var(--muted-2); font-size:16px; margin-bottom:22px;">A friendly space to learn about mental health, run a quick self-check, and explore mental health resources. Not a diagnostic tool.</p>
+
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+        <a href="/index.html" class="btn" style="min-width:220px;">Let's see our site</a>
+        <a href="/login.html" class="btn ghost" style="min-width:180px; color:var(--white-soft); border:1px solid rgba(255,255,255,0.06);">Login</a>
+      </div>
+
+      <div style="margin-top:26px; color:var(--muted-2);">You can log in to save chat history & profile.</div>
+    </section>
+  </main>
+
+  <footer style="padding:36px 0; text-align:center; color:rgba(255,255,255,0.6);">
+    &copy; 2025 Mentallify — educational information only.
+  </footer>
+
+  <script src="/auth.js"></script>
+</body>
+</html>

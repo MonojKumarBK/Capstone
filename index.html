@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mentallify - Mental Health Disorders Resource</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta name="description" content="Mentallify — psychoeducation, a chat assistant and a self-checker for common mental health concerns. Not a diagnostic tool." />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="/" class="logo" aria-label="Mentallify homepage">Mental<span>lify</span></a>
+      <div id="header-actions" style="display:flex; align-items:center; gap:10px;">
+        <!-- optional placeholder for login/profile -->
+        <a href="/login.html" class="btn ghost" style="padding:8px 12px; font-weight:700; text-decoration:none;">Login</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav"><i class="fas fa-bars"></i></button>
+      </div>
+      <nav>
+        <ul id="main-nav" role="menubar">
+          <li role="none"><a role="menuitem" href="/index.html" class="active">Home</a></li>
+          <li role="none"><a role="menuitem" href="/disorders.html">Disorders</a></li>
+          <li role="none"><a role="menuitem" href="/self-check.html">Symptoms</a></li>
+          <li role="none"><a role="menuitem" href="/resources.html">Resources</a></li>
+          <li role="none"><a role="menuitem" href="/contact.html">Contact</a></li>
+          <li role="none"><a role="menuitem" href="/about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="container">
+      <div style="max-width:780px;">
+        <h1 id="hero-heading">Understanding Mental Health Disorders</h1>
+        <p>Mentallify provides psycho-educational content, a chat-style assistant, a self-check quiz, and suggestive ML-based insights. Not a diagnostic tool.</p>
+        <a class="btn" href="#chatbot" id="start-quiz-button">Chat with Our AI Assistant</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main class="container" style="padding-top:26px; padding-bottom:40px;">
+    <div class="main-content mask-gap">
+      <!-- Left content -->
+      <div class="content-area">
+        <section class="content-section" aria-labelledby="common-disorders">
+          <h2 id="common-disorders">Common Mental Health Disorders</h2>
+          <p style="color:var(--muted-2); margin-bottom:12px;">Mental health disorders are medical conditions that affect mood, thinking, behavior, and social functioning. They are common and often treatable.</p>
+
+          <div class="disorder-cards" aria-live="polite">
+            <div class="disorder-card" role="article">
+              <h3><a href="/disorders.html#depression">Depression</a></h3>
+              <p>A mood disorder causing persistent sadness, hopelessness and loss of interest in activities. Treatments: therapy, medication, lifestyle changes.</p>
+            </div>
+            <div class="disorder-card" role="article">
+              <h3><a href="/disorders.html#anxiety">Anxiety</a></h3>
+              <p>Characterized by excessive worry or fear that interferes with daily life. Treatments: CBT, relaxation techniques, medication in some cases.</p>
+            </div>
+            <div class="disorder-card" role="article">
+              <h3><a href="/disorders.html#bipolar">Bipolar Disorder</a></h3>
+              <p>Marked by extreme mood swings (mania to depression). Treatments: mood stabilizers, therapy, consistent routines.</p>
+            </div>
+            <div class="disorder-card" role="article">
+              <h3><a href="/disorders.html#ptsd">PTSD</a></h3>
+              <p>Post-Traumatic Stress Disorder after trauma, causing flashbacks, nightmares, and hypervigilance. Treatments: trauma-focused therapy.</p>
+            </div>
+            <div class="disorder-card" role="article">
+              <h3><a href="/disorders.html#ocd">OCD</a></h3>
+              <p>Obsessive thoughts and compulsive behaviors. Treatments: ERP therapy and medication when needed.</p>
+            </div>
+            <div class="disorder-card" role="article">
+              <h3><a href="/disorders.html#schizophrenia">Schizophrenia</a></h3>
+              <p>A severe condition affecting thinking and perception. Treatments: antipsychotics, psychosocial support and rehabilitation.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- UNDERSTANDING SYMPTOMS - updated to use symptoms-card class -->
+        <section class="content-section symptoms-card" id="symptoms" aria-labelledby="symptoms-heading" style="margin-top:18px;">
+          <h2 id="symptoms-heading" class="section-title">Understanding Symptoms</h2>
+          <p style="color:var(--muted-2); margin-bottom:10px;">Symptoms vary by disorder — below are common signs that warrant professional evaluation:</p>
+          <ul style="color:var(--muted-2); margin-left:16px; line-height:1.7;">
+            <li>Persistent sadness, low mood, or loss of interest</li>
+            <li>Excessive fears or worries affecting daily life</li>
+            <li>Extreme mood changes or dramatic behavior shifts</li>
+            <li>Withdrawal from social activities or friends</li>
+            <li>Noticeable changes in sleep, energy, or appetite</li>
+          </ul>
+          <p style="margin-top:12px; color:var(--muted-2);">If you see several of these symptoms consistently, please contact a mental health professional for assessment.</p>
+        </section>
+      </div>
+
+      <!-- Right: Chatbot (INLINE sticky) -->
+      <aside class="chatbot-container" aria-labelledby="chatbot" style="pointer-events:auto;">
+        <div class="chatbot" id="chatbot" role="region" aria-label="Mental health chat assistant">
+          <div class="chatbot-header">
+            <i class="fas fa-robot" aria-hidden="true"></i>
+            <div>
+              <h3 style="margin:0; font-size:16px;">Mental Health Assistant</h3>
+              <div style="font-size:12px; opacity:0.9;">Confidential & informational — not a substitute for professional care.</div>
+            </div>
+          </div>
+
+          <div class="chatbot-messages" id="chat-messages" aria-live="polite" aria-atomic="false">
+            <div class="message bot-message" role="status" id="welcome-message">
+              Hello! I'm here to listen. Describe what you're experiencing (sleep, mood, worry, appetite) and I'll try to provide information on possible conditions and steps you can take.
+            </div>
+          </div>
+
+          <div class="chatbot-input" role="form" aria-label="Chat input">
+            <input id="user-input" type="text" placeholder="Describe your symptoms or concerns..." aria-label="Type your message here">
+            <button id="send-btn" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Mentallify</h3>
+          <p style="color:#d6e9f3;">Accurate, accessible information about mental health to support understanding and recovery.</p>
+          <div style="margin-top:10px;">
+            <a href="#" style="display:inline-block; width:36px; height:36px; text-align:center; line-height:36px; background:#274b61; border-radius:50%; margin-right:8px; color:white;"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" style="display:inline-block; width:36px; height:36px; text-align:center; line-height:36px; background:#274b61; border-radius:50%; margin-right:8px; color:white;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="display:inline-block; width:36px; height:36px; text-align:center; line-height:36px; background:#274b61; border-radius:50%; color:white;"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="/">Home</a>
+          <a href="/disorders.html">Disorders</a>
+          <a href="/self-check.html">Symptoms Checker</a>
+          <a href="/resources.html">Resources</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <a href="/resources.html">Self-Care Strategies</a>
+          <a href="/resources.html">Therapist Directory</a>
+          <a href="/resources.html">Support Groups</a>
+          <a href="/resources.html">Mental Health Apps</a>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <div style="color:#cfe6f3; margin-bottom:6px;"><i class="fas fa-envelope"></i> info@mentallify.org</div>
+          <div style="color:#cfe6f3;"><i class="fas fa-phone"></i> 1-800-MENTALFY</div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy; 2025 Mentallify. All rights reserved. This site provides educational information only and is not medical advice.
+      </div>
+    </div>
+  </footer>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  // If user came from Symptoms page → skip front screen & show chatbot
+  if (localStorage.getItem("mentallify_start_quiz") === "1") {
+
+    // 1. Hide the intro splash screen IF you have one
+    const introSection = document.getElementById("intro-screen");
+    if (introSection) introSection.style.display = "none";
+
+    // 2. Show the real homepage content (if it is hidden by default)
+    const mainContent = document.querySelector(".main-content");
+    if (mainContent) mainContent.style.display = "grid";
+
+    // 3. Scroll directly to chatbot
+    const bot = document.getElementById("chatbot");
+    if (bot) {
+      setTimeout(() => {
+        bot.scrollIntoView({ behavior: "smooth", block: "center" });
+        document.getElementById("user-input")?.focus();
+      }, 400);
+    }
+
+    // 4. Reset trigger so homepage does not always open chatbot
+    localStorage.removeItem("mentallify_start_quiz");
+  }
+});
+</script>
+
+
+  <script src="/auth.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
